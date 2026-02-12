@@ -5,10 +5,9 @@ fun main() {
     val name = "John Thor"
     val score = 80
 
-
     println("Nama: $name, Nilai: $score")
 
-    // Tambahkan di bawah println
+
     val grade = when (score) {
         in 90..100 -> "A"
         in 80..89 -> "B"
@@ -17,4 +16,10 @@ fun main() {
     }
 
     println("Grade kamu: $grade")
+
+
+    println("Status: ${calculateStatus(score)}")
 }
+
+
+fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
