@@ -1,7 +1,6 @@
 package ` oop_111362_Helen`.week01
 
 fun main() {
-
     val name = "John Thor"
     val score = 80
 
@@ -19,6 +18,13 @@ fun main() {
 
 
     println("Status: ${calculateStatus(score)}")
+
+
+    val studentId: String? = null
+
+
+    val idLength = studentId?.length ?: 0
+    println("Panjang ID: $idLength")
 }
 
 
