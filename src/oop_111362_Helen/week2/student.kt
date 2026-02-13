@@ -1,6 +1,6 @@
 package oop_111362_Helen.week2
 
-class Student (val name: String, val nim: String, var major: String) {
+class `Student.kt` (val name: String, val nim: String, var major: String) {
     init {
         // Validasi Sederhana: Cek panjang NIM
         if (nim.length != 5) {
