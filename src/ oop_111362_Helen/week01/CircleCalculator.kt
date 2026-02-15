@@ -1,10 +1,10 @@
 package ` oop_111362_Helen`.week01
 
 fun main(args: Array<String>) {
-    var radius: Double = 7.0
-    var pi: Double = 3.14
-    var area: Double = pi * radius * radius
-    println("Radius: " + radius + ", Area: " + area)
+    val radius = 7.0
+    val pi = 3.14
+    val area = pi * radius * radius
+    println("Radius: $radius, Area: $area") // Menggunakan String Template
     checkSize(area)
 }
 
