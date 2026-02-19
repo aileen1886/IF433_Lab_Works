@@ -5,14 +5,12 @@ import java.util.Scanner
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    println("--- APLIKASI PMB UMN ---")
 
+    println("--- APLIKASI PMB UMN ---")
     print("Masukkan Nama: ")
     val name = scanner.nextLine()
-
     print("Masukkan NIM (Wajib 5 Karakter): ")
     val nim = scanner.next()
-
     scanner.nextLine()
 
     if (nim.length != 5) {
@@ -33,7 +31,25 @@ fun main() {
         } else {
             println("Pilihan ngawur, pendaftaran batal!")
         }
-
         println("Status: Pendaftaran Selesai.")
     }
+
+    println("\n--- SISTEM DENDA PERPUSTAKAAN ---")
+    scanner.nextLine()
+
+    print("Judul Buku: ")
+    val book = scanner.nextLine()
+
+    print("Nama Peminjam: ")
+    val borrowerName = scanner.nextLine()
+
+    print("Lama Pinjam (Hari): ")
+    var duration = scanner.nextInt()
+
+    if (duration < 0) duration = 1
+
+    val loanObj = Loan(book, borrowerName, duration)
+    println("Detail Pinjaman: ${loanObj.bookTitle} oleh ${loanObj.borrower}")
+    println("Total Denda: Rp ${loanObj.calculateFine()}")
+
 }
