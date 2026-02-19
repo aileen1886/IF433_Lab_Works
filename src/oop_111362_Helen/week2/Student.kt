@@ -1,11 +1,16 @@
 package oop_111362_Helen.week2
 
-class Student (val name: String, val nim: String, var major: String) {
+// Di dalam file Student.kt
+class Student(val name: String, val nim: String, var major: String) {
+
+    // Secondary Constructor
+    constructor(name: String, nim: String) : this(name, nim, "Non-Matriculated") {
+        println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    }
+
     init {
-        // Validasi Sederhana: Cek panjang NIM
         if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")
-            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
         } else {
             println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
         }

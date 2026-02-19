@@ -30,6 +30,3 @@ fun main() {
         println("Status: Pendaftaran Selesai.")
     }
 }
-    constructor(name: String, nim: String) :  this(name, nim, major = "Non-Matriculated"){
-    println("LOG: Menggunakan constructor jalur umum (tanpa jurusan).")
-}
