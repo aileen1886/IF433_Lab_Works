@@ -14,4 +14,12 @@ fun main() {
     w.damage = 9999
 
     println("Weapon: ${w.name}, Damage: ${w.damage}, Tier: ${w.tier}")
+
+    println("\n--- Test Player Task ---")
+    val p = Player("Budi_Player")
+
+    p.addXp(50)
+    println("Current Level: ${p.level}")
+
+    p.addXp(60)
 }
