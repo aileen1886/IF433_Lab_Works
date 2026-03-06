@@ -1,6 +1,18 @@
 package week5
 
 fun main() {
+    println("\n=== SISTEM PEMBAYARAN E-COMMERCE ===")
+
+    val dompet = EWallet("John Thor", 50000.0)
+    val kartu = CreditCard("John Thor", 100000.0)
+
+    val paymentList: List<PaymentMethod> = listOf(dompet, kartu)
+
+    for (payment in paymentList) {
+        println("-- Memproses metode: ${payment.accountName} --")
+
+    }
+
     val math = MathHelper()
 
     println("=== PENGUJIAN OVERLOADING ===")
