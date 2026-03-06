@@ -11,6 +11,14 @@ fun main() {
     for (payment in paymentList) {
         println("-- Memproses metode: ${payment.accountName} --")
 
+        payment.processPayment(75000.0)
+
+        if (payment is EWallet && payment.balance < 75000.0) {
+            println("=> Recovery: Saldo kurang, mencoba Top Up otomatis...")
+            payment.topUp(50000.0)
+            payment.processPayment(75000.0)
+        }
+        println()
     }
 
     val math = MathHelper()
