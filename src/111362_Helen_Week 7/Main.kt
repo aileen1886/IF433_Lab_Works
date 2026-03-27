@@ -35,4 +35,9 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+    println("\n=== RPG SIMULATION ===")
+    // Test Singleton
+    GameManager.startGame()
+    GameManager.startGame()
 }
