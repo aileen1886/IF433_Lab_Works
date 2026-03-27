@@ -20,7 +20,6 @@ fun main() {
     val data2 = DataUser("Alice", 22)
     println(data1)
     println("Sama? ${data1 == data2}")
-
     val data3 = data1.copy(age = 23)
     println("Hasil Copy: $data3")
     val (userName, userAge) = data1
@@ -44,4 +43,11 @@ fun main() {
     println("Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
     val myWeapon = Weapon.forgeStarterSword()
     println(myWeapon.display())
+
+    val upgradedItem = myWeapon.item.copy(name = "Pedang Kayu +1", damage = 25)
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
