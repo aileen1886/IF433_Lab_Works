@@ -1,4 +1,4 @@
-package oop_111362_Helen.week2
+package week2
 
 class Hero(val name: String, val baseDamage: Int, var hp: Int = 100) {
 

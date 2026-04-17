@@ -1,4 +1,4 @@
-package oop_111362_Helen.week2
+package week2
 
 import java.util.Scanner
 

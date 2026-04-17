@@ -1,4 +1,4 @@
-package oop_111362_Helen.week2
+package week2
 
 class Loan(
     val bookTitle: String,
