@@ -1,7 +1,6 @@
 package week09
 
 fun main() {
-    // Inisialisasi list minimal 6 data dengan campuran status dan ROE
     val tradeHistory = listOf(
         TradeLog("BTCUSDT", "LONG", 20, 15.5, "CLOSED"),
         TradeLog("ETHUSDT", "SHORT", 10, -5.2, "CLOSED"),
@@ -11,4 +10,5 @@ fun main() {
         TradeLog("ETHUSDT", "LONG", 10, 2.1, "OPEN"),
         TradeLog("DOGEUSDT", "SHORT", 5, -2.5, "CLOSED")
     )
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 }
