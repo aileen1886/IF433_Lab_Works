@@ -5,4 +5,5 @@ data class TradeLog(
     val position: String,
     val leverage: Int,
     val roe: Double,
+    val status: String
 )
