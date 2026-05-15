@@ -30,4 +30,14 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+    println("\n--- JADWAL MAKAN SORE ---")
+    runCatching {
+        dispenseKibble(30, 1000, false)
+    }.onSuccess { newStock ->
+        currentKibbleStock = newStock
+        println("Makan sore sukses! Sisa stok kibble: $currentKibbleStock gr")
+    }.onFailure { error ->
+        println("Peringatan ke Pemilik: ${error.message}")
+        println("(Opsional: Berikan chicken jerky secara manual)")
+    }
 }
